@@ -9,8 +9,9 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f7f7f7;
+            background-color: beige;
             color: #333;
+            position: relative;
         }
 
         header {
@@ -47,6 +48,9 @@
 
         time {
             color: #888;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
         }
 
         footer {
@@ -73,6 +77,18 @@
         footer ul li a:hover {
             text-decoration: underline;
         }
+
+        /* Added styles for audio and video */
+        .media-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        audio,
+        video {
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -97,12 +113,13 @@
             <p>We deal with <mark>fresh fruits</mark> and <mark>vegetables</mark>.</p>
         </div>
         
-        <!-- Adding time tag -->
-        <time datetime="2024-02-29">February 29, 2024</time>
-        
         <!-- Adding canvas tag -->
         <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"></canvas>
         
+    </header>
+    
+    <!-- Your main content goes here -->
+    <div class="media-container">
         <!-- Adding audio and video tags -->
         <audio controls>
             <source src="audio.mp3" type="audio/mpeg">
@@ -112,25 +129,36 @@
             <source src="movie.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        
-        <!-- Adding form tag -->
-        <form action="/submit" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name"><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email"><br><br>
-            <input type="submit" value="Submit">
-        </form>
-        
-        <!-- Adding conditional comment for IE -->
-        <!--[if IE]>
-            <p>This content is only visible in Internet Explorer.</p>
-        <![endif]-->
-    </header>
+    </div>
     
-    <!-- Your main content goes here -->
+    <!-- Adding form tag -->
+    <form action="/submit" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <input type="submit" value="Submit">
+    </form>
     
-    <!-- Adding footer -->
+    <!-- Adding conditional comment for IE -->
+    <!--[if IE]>
+        <p>This content is only visible in Internet Explorer.</p>
+    <![endif]-->
+
+    <!-- Date and time stamp -->
+    <time datetime="2024-02-29" id="datetime">February 29, 2024</time>
+
+    <!-- Script to update date and time -->
+    <script>
+        setInterval(() => {
+            const dateTime = document.getElementById('datetime');
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
+            dateTime.textContent = now.toLocaleString('en-US', options);
+        }, 1000); // Update every second
+    </script>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 H ORGANICS. All rights reserved.</p>
         <!-- Links to social media accounts -->
