@@ -3,26 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Engineering</title>
+    <title>H ORGANICS</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Reset */
+        * {
             margin: 0;
             padding: 0;
-            background-color: beige;
-            color: #333;
-            position: relative;
+            box-sizing: border-box;
         }
 
+        /* Body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
         header {
             background-color: #fff;
-            padding: 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .logo {
+            padding: 20px;
             display: flex;
+            justify-content: space-between;
             align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
         }
 
         .logo img {
@@ -31,76 +42,119 @@
             margin-right: 10px;
         }
 
+        .logo h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
         nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
+            list-style: none;
         }
 
         nav ul li {
-            display: inline;
+            display: inline-block;
             margin-right: 20px;
         }
 
-        .intro {
-            margin-top: 20px;
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
         }
 
-        time {
-            color: #888;
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
+        nav ul li a:hover {
+            color: #666;
         }
 
+        /* Main Content */
+        .container {
+            margin-top: 80px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: calc(33.33% - 40px);
+            padding: 20px;
+            margin-bottom: 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Footer */
         footer {
             background-color: #333;
             color: #fff;
             padding: 20px;
             text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        footer p {
+            margin-bottom: 10px;
         }
 
         footer ul {
-            padding: 0;
+            list-style: none;
         }
 
         footer ul li {
-            display: inline;
+            display: inline-block;
             margin-right: 10px;
         }
 
         footer ul li a {
             color: #fff;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         footer ul li a:hover {
-            text-decoration: underline;
+            color: #ccc;
         }
 
-        /* Added styles for audio and video */
-        .media-container {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-        }
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
 
-        audio,
-        video {
-            margin-top: 10px;
+            .box {
+                width: calc(100% - 40px);
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <!-- Your website logo or name -->
             <img src="logo.avif" alt="H ORGANICS">
-            <h2>H ORGANICS</h2>
+            <h1>H ORGANICS</h1>
         </div>
         
         <nav>
-            <!-- Your navigation menu -->
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -108,60 +162,25 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-        
-        <div class="intro">
-            <p>We deal with <mark>fresh fruits</mark> and <mark>vegetables</mark>.</p>
-        </div>
-        
-        <!-- Adding canvas tag -->
-        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"></canvas>
-        
     </header>
     
-    <!-- Your main content goes here -->
-    <div class="media-container">
-        <!-- Adding audio and video tags -->
-        <audio controls>
-            <source src="audio.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <video width="320" height="240" controls>
-            <source src="video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <div class="container">
+        <div class="box">
+            <h2>Welcome to H ORGANICS</h2>
+            <p>Discover the freshest fruits and vegetables sourced directly from local farmers.</p>
+        </div>
+        <div class="box">
+            <h2>Our Mission</h2>
+            <p>To promote healthy living through sustainable agriculture and organic farming practices.</p>
+        </div>
+        <div class="box">
+            <h2>Get in Touch</h2>
+            <p>Have any questions or inquiries? Contact us today!</p>
+        </div>
     </div>
     
-    <!-- Adding form tag -->
-    <form action="/submit" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br><br>
-        <input type="submit" value="Submit">
-    </form>
-    
-    <!-- Adding conditional comment for IE -->
-    <!--[if IE]>
-        <p>This content is only visible in Internet Explorer.</p>
-    <![endif]-->
-
-    <!-- Date and time stamp -->
-    <time datetime="2024-02-29" id="datetime">February 29, 2024</time>
-
-    <!-- Script to update date and time -->
-    <script>
-        setInterval(() => {
-            const dateTime = document.getElementById('datetime');
-            const now = new Date();
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
-            dateTime.textContent = now.toLocaleString('en-US', options);
-        }, 1000); // Update every second
-    </script>
-
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 H ORGANICS. All rights reserved.</p>
-        <!-- Links to social media accounts -->
         <ul>
             <li><a href="#">Facebook</a></li>
             <li><a href="#">Twitter</a></li>
