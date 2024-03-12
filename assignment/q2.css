@@ -10,10 +10,14 @@ body {
 
 .container {
     width: 80%; /* Adjust as needed */
+    height: 60vh; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .red-box {
-    width: 100%;
-    padding-top: 100%; /* This maintains a 1:1 aspect ratio */
+    width: 105%; /* Adjust as needed */
+    height: 100%; /* Adjust as needed */
     background-color: red;
 }
