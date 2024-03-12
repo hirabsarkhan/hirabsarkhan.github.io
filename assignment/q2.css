@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #CCCCCC; /* Grey color */
+    height: 50px;
+    text-align: left;
+    padding: 10px;
+}
+
+.footer {
+    background-color: #800080; /* Purple color */
+    height: 50px;
+    text-align: left;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.sidebar {
+    height: 100vh; /* Full height */
+    width: 150px;
+    position: fixed;
+    padding: 10px;
+    text-align: left;
+}
+
+.sidebar-left {
+    background-color: #FFC0CB; /* Pink color */
+    left: 0;
+}
+
+.sidebar-right {
+    background-color: #7DF9FF; /* Electric blue color */
+    right: 0;
+}
+
+.content {
+    margin-left: 160px; /* Adjust according to sidebar width */
+    margin-right: 160px; /* Adjust according to sidebar width */
+    background-color: #FF0000; /* Red color */
+    padding: 20px;
+    text-align: center;
+}
+
+.label {
+    color: white;
+    font-weight: bold;
+}
