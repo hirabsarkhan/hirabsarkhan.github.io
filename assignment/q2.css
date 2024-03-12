@@ -1,49 +1,47 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #FFFFFF; /* White background */
 }
 
-.header {
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px; /* White padding */
+    box-sizing: border-box; /* Include padding in total width */
+}
+
+.header, .footer, .content, .sidebar {
+    padding: 10px; /* Additional padding for elements */
+}
+
+.header, .footer, .sidebar {
     background-color: #CCCCCC; /* Grey color */
-    height: 50px;
     text-align: left;
-    padding: 10px;
 }
 
 .footer {
     background-color: #800080; /* Purple color */
-    height: 50px;
-    text-align: left;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-.sidebar {
-    height: 100vh; /* Full height */
-    width: 150px;
-    position: fixed;
-    padding: 10px;
-    text-align: left;
 }
 
 .sidebar-left {
     background-color: #FFC0CB; /* Pink color */
-    left: 0;
+    width: 150px;
+    margin-right: 20px; /* White space between sidebar and content */
 }
 
 .sidebar-right {
     background-color: #7DF9FF; /* Electric blue color */
-    right: 0;
+    width: 150px;
+    margin-left: 20px; /* White space between sidebar and content */
 }
 
 .content {
-    margin-left: 160px; /* Adjust according to sidebar width */
-    margin-right: 160px; /* Adjust according to sidebar width */
     background-color: #FF0000; /* Red color */
-    padding: 20px;
-    text-align: center;
+    flex-grow: 1; /* Main content expands to fill remaining space */
+    margin-top: 20px; /* White space between header and content */
+    margin-bottom: 20px; /* White space between content and footer */
 }
 
 .label {
