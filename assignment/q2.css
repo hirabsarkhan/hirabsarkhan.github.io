@@ -1,52 +1,19 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #FFFFFF; /* White background */
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
-    display: grid;
-    grid-template-areas: 
-        "header header header"
-        "leftside content rightside"
-        "footer footer footer";
-    grid-template-columns: 1fr 3fr 1fr; /* 1:3:1 ratio for columns */
-    grid-template-rows: auto 1fr auto; /* Auto-sized rows with the middle one taking up remaining space */
-    height: 100vh;
-    padding: 20px; /* White padding */
-    box-sizing: border-box; /* Include padding in total width */
+    width: 80%; /* Adjust as needed */
 }
 
-.header, .footer {
-    background-color: #CCCCCC; /* Grey color */
-    padding: 10px;
-    grid-area: header;
-}
-
-.footer {
-    background-color: #800080; /* Purple color */
-    grid-area: footer;
-}
-
-.leftside {
-    background-color: #FFC0CB; /* Pink color */
-    padding: 10px;
-    grid-area: leftside;
-}
-
-.rightside {
-    background-color: #7DF9FF; /* Electric blue color */
-    padding: 10px;
-    grid-area: rightside;
-}
-
-.content {
-    background-color: #FF0000; /* Red color */
-    padding: 10px;
-    grid-area: content;
-}
-
-.label {
-    color: white;
-    font-weight: bold;
+.red-box {
+    width: 100%;
+    padding-top: 100%; /* This maintains a 1:1 aspect ratio */
+    background-color: red;
 }
