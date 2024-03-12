@@ -3,21 +3,75 @@ body {
     padding: 0;
     background-color: white;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+}
+
+.header, .footer {
+    width: calc(100% - 2cm);
+    height: 2cm;
+    margin: 0.2cm 0.5cm 0 0.5cm; /* Adjusted margin */
+}
+
+.header {
+    background-color: lightgrey;
+}
+
+.light-grey-footer {
+    background-color: rgb(96, 8, 150);
+}
+
+.dark-purple-footer {
+    background-color: darkpurple; /* Changed background color to darkpurple */
 }
 
 .container {
-    width: 80%; /* Adjust as needed */
-    height: 60vh; /* Adjust as needed */
+    width: 24cm; /* Increased width in cm to accommodate side containers */
+    height: calc(100vh - 5.5cm);
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 0.3cm; /* Adjusted margin */
+    margin-bottom: 0.3cm; /* Adjusted margin */
 }
 
 .red-box {
-    width: 105%; /* Adjust as needed */
-    height: 100%; /* Adjust as needed */
+    width: 18cm; /* Adjusted width in cm to accommodate side containers and margin */
+    height: 100%; /* Keep red box height same */
+    margin: 0 1cm; /* Add margin between red box and side containers */
     background-color: red;
 }
+
+.side-container {
+    width: 3cm; /* Adjusted width of side containers in cm */
+    height: 100%; /* Take the full height of the container */
+    
+
+}   
+
+.side-container {
+    height: 100%;
+    margin-top: 0.2cm; /* Adjusted top margin */
+    margin-bottom: 0.2cm; /* Adjusted bottom margin */
+}
+
+.side-container.blue {
+    margin-left: -2.5cm; /* Adjusted left margin for blue container */
+    margin-right: 0.2cm; /* Adjusted right margin for blue container */
+}
+
+.side-container.green {
+    margin-left: 0.2cm; /* Adjusted left margin for green container */
+    margin-right: -2.5cm; /* Adjusted right margin for green container */
+}
+
+.blue {
+    background-color: rgb(244, 138, 246); /* Change to the desired color */
+}
+
+.green {
+    background-color: rgb(17, 17, 192); /* Change to the desired color */
+}
+
