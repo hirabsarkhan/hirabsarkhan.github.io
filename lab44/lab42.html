@@ -4,42 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>12 Column Grid Example</title>
-  <style>
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-      overflow: hidden; /* Clearfix */
-    }
-    .row::after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    .col {
-      float: left;
-      box-sizing: border-box;
-    }
-    /* Define column widths for different screen sizes */
-    @media screen and (min-width: 768px) {
-      .col {
-        width: 50%; /* Two columns on larger screens */
-      }
-    }
-    @media screen and (min-width: 992px) {
-      .col {
-        width: 33.33%; /* Three columns on even larger screens */
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
     <div class="row">
-      <div class="col">Column 1</div>
-      <div class="col">Column 2</div>
-      <div class="col">Column 3</div>
+      <div class="col-4">Section 1</div>
+      <div class="col-4">Section 2</div>
+      <div class="col-4">Section 3</div>
     </div>
   </div>
 </body>
 </html>
+
