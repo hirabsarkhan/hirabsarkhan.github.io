@@ -1,76 +1,74 @@
+/* Reset default margin, padding, and font family */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif; /* Changed font family */
+  font-family: 'Arial', sans-serif;
+  height: 100vh; /* Set body height to fill viewport */
+  overflow: hidden; /* Hide overflow */
+  background-color: #ffffff; /* White background */
 }
 
+/* Main container */
 .container {
-  width: 90%;
-  margin: 20px auto;
-  border: 4px solid #5d0000;
+  width: calc(100% - 20px); /* Adjusted width to accommodate border */
+  height: calc(100% - 20px); /* Adjusted height to accommodate border */
+  border: 4px solid #5d0000; /* Red border */
+  margin: 10px; /* Little gap from each side */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange children vertically */
 }
 
-.header {
-  background-color: #ccccccb5;
+/* Header and Footer */
+.header,
+.footer {
+  background-color: #cccccc; /* Light grey */
   padding: 10px;
   height: 50px;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
   text-align: left;
-  font-size: 1.0rem; 
-  font-family: 'Arial', sans-serif; 
-}
-
-.columns {
-  display: flex;
-}
-
-.column {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.left-column {
-  background-color: rgb(237, 95, 206);
-  height: 400px;
-  width: 100px;
-  margin-top: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  margin-left: 10px;
-}
-
-.middle-column {
-  background-color: rgb(205, 20, 20);
-  width: 1300px;
-  height: 400px;
-  margin-top: 20px;
-  margin-right: 10px;
-  margin-bottom: 20px;
-  margin-left: 0px;
-}
-
-.right-column {
-  background-color: rgb(8, 8, 214);
-  width: 100px;
-  height: 400px;
-  margin-top: 20px;
-  margin-right: 10px;
-  margin-bottom: 20px;
-  margin-left: 10px;
+  font-size: 1.0rem;
+  font-family: 'Arial', sans-serif;
+  margin: 5px; /* Add a little gap between header/footer and other containers */
 }
 
 .footer {
-  background-color: rgb(100, 8, 154);
-  padding: 10px;
-  height: 50px;
-  margin-top: 0px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  text-align: left;
-  font-size: 1.0rem; 
-  font-family: 'Arial', sans-serif; 
+  background-color: rgb(100, 8, 154); /* Purple */
+}
+
+/* Columns layout */
+.columns {
+  flex: 1; /* Use remaining space for columns */
+  display: flex; /* Use flexbox for layout */
+}
+
+/* Individual column styling */
+.column {
+  padding: 20px;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange children vertically */
+}
+
+/* Left and Right columns */
+.left-column,
+.right-column {
+  width: 100px;
+  margin: 0 5px; /* Add a small margin between columns */
+}
+
+/* Middle column */
+.middle-column {
+  flex: 1; /* Expand to fill remaining space */
+  margin: 0 5px; /* Add a small margin between columns */
+}
+
+/* Specific background colors for each column */
+.left-column {
+  background-color: rgb(237, 95, 206); /* Pink */
+}
+
+.middle-column {
+  background-color: rgb(205, 20, 20); /* Red */
+}
+
+.right-column {
+  background-color: rgb(8, 8, 214); /* Blue */
 }
