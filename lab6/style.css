@@ -1,0 +1,38 @@
+/* Custom CSS styles for the portfolio */
+
+/* Navbar styles */
+.navbar {
+    border-radius: 0;
+  }
+  
+  /* Section styles */
+  section {
+    margin-bottom: 30px;
+  }
+  
+  /* Skills section styles */
+  #skills ul {
+    list-style-type: none;
+  }
+  
+  /* Projects section styles */
+  #projects .card {
+    margin-bottom: 20px;
+  }
+  
+  /* Contact section styles */
+  #contact form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .navbar-nav {
+      margin-left: auto;
+    }
+    
+    /* Adjust other styles as needed */
+  }
+  
