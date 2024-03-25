@@ -1,0 +1,166 @@
+/* Custom CSS styles for the portfolio */
+
+/* Navbar styles */
+.navbar {
+  border-radius: 0;
+  background-color: #f06292; /* Pink background */
+}
+
+.navbar-brand {
+  color: #fff !important; /* White text */
+  font-size: 24px; /* Larger font size */
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important; /* White text */
+  font-size: 18px; /* Larger font size */
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; /* White navbar toggler icon */
+}
+
+/* Section styles */
+section {
+  margin-bottom: 50px; /* Increased margin bottom */
+}
+
+/* Header section styles */
+header {
+  background-color: #fce4ec; /* Light pink background */
+  padding: 50px 0; /* Increased padding */
+  text-align: center; /* Centered text */
+}
+
+header h1 {
+  font-size: 48px; /* Larger font size */
+  color: #f06292; /* Pink text */
+}
+
+header p {
+  font-size: 20px; /* Larger font size */
+  color: #333; /* Darker text color */
+}
+
+/* About section styles */
+#about {
+  background-color: #fff; /* White background */
+  padding: 50px 0; /* Increased padding */
+  text-align: center; /* Centered text */
+}
+
+#about h2 {
+  font-size: 36px; /* Larger font size */
+  color: #f06292; /* Pink text */
+}
+
+#about p {
+  font-size: 20px; /* Larger font size */
+  color: #333; /* Darker text color */
+}
+
+/* Skills section styles */
+#skills {
+  background-color: #fce4ec; /* Light pink background */
+  padding: 50px 0; /* Increased padding */
+}
+
+#skills h2 {
+  font-size: 36px; /* Larger font size */
+  color: #f06292; /* Pink text */
+  text-align: center; /* Centered text */
+}
+
+#skills ul {
+  list-style-type: none; /* No bullets */
+  padding: 0;
+}
+
+#skills li {
+  font-size: 24px; /* Larger font size */
+  color: #333; /* Darker text color */
+}
+
+/* Projects section styles */
+#projects {
+  background-color: #fff; /* White background */
+  padding: 50px 0; /* Increased padding */
+}
+
+#projects h2 {
+  font-size: 36px; /* Larger font size */
+  color: #f06292; /* Pink text */
+  text-align: center; /* Centered text */
+}
+
+.card {
+  background-color: #fce4ec; /* Light pink background */
+  border-color: #f06292; /* Pink border color */
+  border-radius: 20px; /* Rounded corners */
+}
+
+.card-title {
+  font-size: 24px; /* Larger font size */
+  color: #f06292; /* Pink text */
+}
+
+.card-text {
+  font-size: 18px; /* Larger font size */
+  color: #333; /* Darker text color */
+}
+
+/* Contact section styles */
+#contact {
+  background-color: #f8bbd0; /* Lighter pink background */
+  padding: 50px 0; /* Increased padding */
+  text-align: center; /* Centered text */
+}
+
+#contact h2 {
+  font-size: 36px; /* Larger font size */
+  color: #f06292; /* Pink text */
+}
+
+#contact p {
+  font-size: 20px; /* Larger font size */
+  color: #333; /* Darker text color */
+}
+
+#contact form {
+  max-width: 500px; /* Limit form width */
+  margin: 0 auto; /* Center form horizontally */
+}
+
+/* Form field styles */
+.form-control {
+  border-color: #f06292; /* Pink border color */
+}
+
+.form-control:focus {
+  box-shadow: none; /* Remove focus box-shadow */
+}
+
+/* Button styles */
+.btn-pink {
+  background-color: #f06292; /* Pink background */
+  border-color: #f06292; /* Pink border */
+  color: #fff; /* White text */
+  padding: 10px 30px; /* Increased padding */
+  font-size: 18px; /* Larger font size */
+  border-radius: 20px; /* Rounded corners */
+}
+
+.btn-pink:hover {
+  background-color: #ec407a; /* Darker pink on hover */
+  border-color: #ec407a; /* Darker pink border on hover */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  .navbar-nav {
+      margin-left: auto;
+  }
+
+  /* Adjust other styles as needed */
+}
