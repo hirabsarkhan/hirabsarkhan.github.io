@@ -59,12 +59,11 @@ header p {
   color: #333; /* Darker text color */
 }
 
-/*Skills section styles */
-skills {
-  background-color: #df8ba7;  
-  padding: 50px 0; 
+/* Skills section styles */
+#skills {
+  background-color: #df8ba7; /* Pink background */
+  padding: 50px 0; /* Increased padding */
 }
-
 
 #skills h2 {
   font-size: 36px; /* Larger font size */
