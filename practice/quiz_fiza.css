@@ -1,0 +1,48 @@
+/* CSS styles for the table */
+table {
+    border-collapse: collapse;
+    border-width: 2px;
+    width: 50%;
+
+}
+
+th, td {
+    border: 2px solid black;
+
+}
+
+th{
+    background-color: gray;
+}
+
+#id1{
+    background-color: blue;
+    border: 3px solid black;
+    border-top-color: red;
+}
+
+#id2{
+    background-color: purple;
+    color: white;
+    border: 3px solid black;
+    border-top-color: white;
+    border-right-color: white;
+}
+
+
+
+#id3{
+    background-color: rgb(249, 242, 232);
+}
+
+#id4{
+    color: brown;
+    border-right: brown;
+    border: 3px solid black;
+    border-right-color: brown;
+}
+
+#id5{
+
+    border: 3px solid pink;
+}
