@@ -61,22 +61,46 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Handle menu button click
     menuButton.addEventListener('click', function() {
-        subMenu.style.display = subMenu.style.display === 'block' ? 'none' : 'block';
+        // Toggle the submenu display
+        subMenu.style.display = (subMenu.style.display === 'block' ? 'none' : 'block');
     });
     
-    // Handle sub menu options
-    document.getElementById('scientificMode').addEventListener('click', function() {
-        alert('Scientific Mode selected. (This mode is not yet implemented.)');
-        subMenu.style.display = 'none';
+    // Attach event listeners for submenu options
+    const scientificModeButton = document.getElementById('scientificMode');
+    const unitConversionButton = document.getElementById('unitConversion');
+    const currencyConversionButton = document.getElementById('currencyConversion');
+    
+    scientificModeButton.addEventListener('click', function() {
+        loadModeFiles('scientific');
     });
     
-    document.getElementById('unitConversion').addEventListener('click', function() {
-        alert('Unit Conversion selected. (This mode is not yet implemented.)');
-        subMenu.style.display = 'none';
+    unitConversionButton.addEventListener('click', function() {
+        loadModeFiles('conversion');
     });
     
-    document.getElementById('currencyConversion').addEventListener('click', function() {
-        alert('Currency Conversion selected. (This mode is not yet implemented.)');
-        subMenu.style.display = 'none';
+    currencyConversionButton.addEventListener('click', function() {
+        loadModeFiles('conversion');
     });
+    
+    // Function to load mode files based on the selected option
+    function loadModeFiles(mode) {
+        const modeScript = document.getElementById('modeScript');
+        const modeStyle = document.getElementById('modeStyle');
+        
+        // Update script and style sources based on the selected mode
+        if (mode === 'scientific') {
+            modeScript.src = 'scripts/scientific.js';
+            modeStyle.href = 'styles/scientific.css';
+        } else if (mode === 'conversion') {
+            modeScript.src = 'scripts/conversion.js';
+            modeStyle.href = 'styles/conversion.css';
+        } else {
+            // Clear mode files if no mode is selected
+            modeScript.src = '';
+            modeStyle.href = '';
+        }
+        
+        // Hide submenu after selecting an option
+        subMenu.style.display = 'none';
+    }
 });

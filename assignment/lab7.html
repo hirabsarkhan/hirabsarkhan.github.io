@@ -3,35 +3,37 @@
 
 <head>
     <title>Lab 7 - Calculator</title>
-    <link rel="stylesheet" type="text/css" href="lab7.css">
-    <script src="lab7.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="styles/lab7.css">
+    <script src="scripts/lab7.js" defer></script>
 </head>
 
 <body>
     <div id="calculator">
         <div id="display">0</div>
         <div id="buttonContainer">
+            <!-- Calculator Buttons -->
             <button class="btn" data-value="7">7</button>
             <button class="btn" data-value="8">8</button>
             <button class="btn" data-value="9">9</button>
             <button class="btn operator" data-value="/">/</button>
-            
+
             <button class="btn" data-value="4">4</button>
             <button class="btn" data-value="5">5</button>
             <button class="btn" data-value="6">6</button>
             <button class="btn operator" data-value="*">*</button>
-            
+
             <button class="btn" data-value="1">1</button>
             <button class="btn" data-value="2">2</button>
             <button class="btn" data-value="3">3</button>
             <button class="btn operator" data-value="-">-</button>
-            
+
             <button class="btn clear" data-value="C">C</button>
             <button class="btn" data-value="0">0</button>
             <button class="btn equals" data-value="=">=</button>
             <button class="btn operator" data-value="+">+</button>
         </div>
         
+        <!-- Navigation Menu -->
         <div id="menu">
             <button id="menuButton">...</button>
             <div id="subMenu">
@@ -41,6 +43,10 @@
             </div>
         </div>
     </div>
+
+    <!-- Placeholder for conditional CSS and JavaScript -->
+    <script id="modeScript"></script>
+    <link id="modeStyle" rel="stylesheet" type="text/css">
 </body>
 
 </html>
