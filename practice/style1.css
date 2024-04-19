@@ -1,0 +1,32 @@
+.container {
+  background-color: blueviolet;
+  height: 300px;
+  display: flex; /* flex | inline-flex */
+  flex-wrap: wrap; /* nowrap | wrap | wrap-reverse */
+  flex-direction: row; /* row | column | row-reverse | column-reverse  */
+  justify-content: flex-end; /*flex-start | flex-end | center | space-between | space-around */
+  align-items: flex-end;  /* flex-start flex-end  centre baseline stretch move around cross axis */
+  align-content: space-around;   /* flex-start flex-end centre space-around space-between stretch move around cross axis */
+
+}
+
+/* .row {
+  display: flex;
+} */
+
+.item3{
+  order: 1;
+}
+
+.item1, .item2, .item3, .item4, .item5 {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(229, 52, 52);
+  margin: 5px;
+
+  flex: 0 0 2px;
+  align-self: center;   /* Override align-item alignment for this specific item    flex-start, flex-end, center, baseline, and stretch */
+}
+
+

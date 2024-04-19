@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+    <form action="/action.php">
+        username: <input type="text" placeholder="enter you username">
+        <br>
+        <br>
+        passwords: <input type="password" placeholder="enter password">
+
+        <br>
+        <!--if we use label tag for each button and issign ids ,then we can click on the text too-->
+        <input type="radio" value="1" name="choice">yes
+        <input type="radio" value="0" name="choice">No
+
+
+        <textarea name="Comments">This is a multi-line text field</textarea>
+
+        <input type="hidden" name="Account" value="This is a hidden text field" />
+    </form>
+
+        <hr>
+        <form method="post" action="form.aspx">
+            <fieldset>
+               <legend>Client Details</legend>
+               Name <input type="text" id="Name" />
+               <br>
+               Phone <input type="text" id="Phone" />
+            </fieldset>
+            <fieldset>
+               <legend>Order Details</legend>
+               Qty <input type="text" id="Quantity" />
+               Remarks <textarea cols="40" rows="10"  id="Remarks"></textarea>
+            </fieldset>
+         </form>
+         
+    <hr>
+    <select name="gender">
+          <option value="Value 1" >Male</option>
+          <option value="Value 2">Female</option>
+          <option value="Value 3">Other</option>
+        </select>
+        
+        <hr>
+        <input type="submit" name="submitBtn" value="press me" />
+        <input type="button" value="click me" />
+
+        <hr>
+        <select name="products" multiple="multiple">
+              <option value="Value 1" selected="selected">keyboard</option>
+              <option value="Value 2">mouse</option>
+              <option value="Value 3">speakers</option>
+            </select>
+
+            <input type="file" name="photo" />
+<hr>
+            <label for="fn">First Name</label>
+<input type="text" id="fn" />
+
+  <div style="background-color: light rgb(247, 247, 170);">
+
+
+    <form method="post" action="apply-now.php">
+          <input name="subject" type="hidden" value="Class" />
+          <fieldset><legend>Academic information</legend>
+            <label for="degree">Degree</label>
+            <select name="degree" id="degree">
+              <option value="BA">Bachelor of Art</option>
+              <option value="BS">Bachelor of Science</option>
+              <option value="MBA" selected="selected">Master of
+                Business Administration</option>
+            </select>
+            <br />
+            <label for="studentid">Student ID</label>
+            <input type="password" name="studentid" />
+          </fieldset>
+          <fieldset><legend>Personal Details</legend>
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" id="fname" />
+            <br />
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" id="lname" />
+        <br />
+        Gender: 
+        <input name="gender" type="radio" id="gm" value="m" />
+        <label for="gm">Male</label>
+        <input name="gender" type="radio" id="gf" value="f" />
+        <label for="gf">Female</label>
+        <br />
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" />
+        </fieldset>
+        <p>
+        <textarea name="terms" cols="30" rows="4"
+         readonly="readonly">TERMS AND CONDITIONS...</textarea>
+        </p>
+        <p>
+        <input type="submit" name="submit" value="Send Form" />
+        <input type="reset" value="Clear Form" />
+        </p>
+        </form>
+
+
+
+</div>
+
+
+    
+</body>
+</html>

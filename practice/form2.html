@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form</title>
+    </head>
+<body>
+
+<form action="/submit" method="post">
+
+  <fieldset>
+
+    <legend>Personal Information</legend>
+
+    <label for="fname">First Name:</label><br>
+    <input type="text" id="fname" name="fname" required><br>
+
+    <label for="lname">Last Name:</label><br>
+    <input type="text" id="lname" name="lname" required><br>
+
+    <label for="gender">Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male">
+
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+
+    <label for="female">Female</label><br>
+
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age" required><br>
+
+    <label for="country">Country:</label><br>
+
+    <select id="country" name="country">
+      <option value="usa">USA</option>
+      <option value="canada">Canada</option>
+      <option value="uk">UK</option>
+    </select><br>
+
+
+    <label for="interests">Interests:</label><br>
+    <input type="checkbox" id="sports" name="interests" value="sports">
+    <label for="sports">Sports</label><br>
+    <input type="checkbox" id="music" name="interests" value="music">
+    <label for="music">Music</label><br>
+    <input type="checkbox" id="movies" name="interests" value="movies">
+    <label for="movies">Movies</label><br>
+
+    
+  </fieldset>
+  <fieldset>
+    <legend>Education</legend>
+    <label for="university">University:</label><br>
+    <input type="text" id="university" name="university" required><br>
+    <label for="degree">Degree</label>
+    <input type="radio" id="bachelors" name="degree" value="bachelors">
+    <label for="bachelors">Bachelors</label>
+    <input type="radio" id="Masters" name="degree" value="Masters">
+    <label for="bachelors">Masters</label>
+    <input type="radio" id="Phd" name="degree" value="Phd">
+    <label for="Phd">Phd</label><br>
+    <select id="bachelorsof" name="bachelorsof">
+        <option value="Comp sci">Computer Science</option>
+        <option value="Comp eng">Computer Engineering</option>
+        <option value="Civil eng">Civil Engineering</option>
+    </select><br>
+    <label for="cgpa">CGPA:</label><br>
+    <input type="text" id="cgpa" name="cgpa" required><br>
+    <label for="message">Why did you choose CS?</label><br>
+    <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
+  </fieldset>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+table {
+    border-collapse: collapse;
+    border-width: 2px;
+
+}
+
+th, td {
+    border: 2px solid black;
+
+}
+
+
+th{
+    background-color: gray;
+}
+
+#c1{
+
+    background-color: blue;
+    border: 3px solid black;
+    border-top-color: red;
+
+}
+
+#c2{
+    background-color: rgb(191, 13, 211);
+    border: 3px solid black;
+    border-right-color: white;
+    border-top-color: white;
+    border-bottom-color: white;
+    color: white;
+}
+
+#c3 {
+
+    background-color: bisque;
+}
+
+#c4 {
+    color: brown;
+    border: 3px solid white;
+    border-right-color: brown;
+    border-left-color: black;
+    
+}
+
+#c5{
+    border: 4px solid pink;
+}
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Website</title>
+<style>
+    /* Resetting default margin and padding */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Styling header */
+    header {
+        background-color: #FF5733; /* Vibrant color for header */
+        padding: 20px;
+        text-align: center;
+        margin: 5px;
+    }
+
+    /* Styling left side */
+    .left-side {
+        background-color: #FFC300; /* Vibrant color for left side */
+        width: 14%;
+        min-width: 150px; /* Set a minimum width to prevent it from becoming too narrow */
+        height: 75vh;
+        float: left;
+        padding: 10px;
+        margin-right: 3px;
+    }
+
+    /* Styling middle content area */
+    .middle {
+        background-color: #C70039; /* Vibrant color for middle content area */
+        width: 71.6%;
+        min-width: 200px; /* Set a minimum width to prevent it from becoming too narrow */
+        height: 75vh;
+        float: left;
+        padding: 10px;
+    }
+
+    /* Styling right side */
+    .right-side {
+        background-color: #900C3F; /* Vibrant color for right side */
+        width: 12%;
+        min-width: 150px; /* Set a minimum width to prevent it from becoming too narrow */
+        height: 75vh;
+        float: left;
+        padding: 10px;
+        margin-left: 3px;
+    }
+
+    /* Clearfix to clear floats */
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    /* Styling footer */
+    footer {
+        background-color: #0A3D62; /* Vibrant color for footer */
+        padding: 20px;
+        margin: 5px;
+        text-align: center;
+        clear: both;
+    }
+
+    /* Responsive styling */
+    @media only screen and (max-width: 768px) {
+        .left-side, .middle, .right-side {
+            width: 100%;
+            min-width: 0; /* Reset the minimum width */
+            margin: 0; /* Remove margin between sections */
+            padding: 5px; /* Adjust padding for smaller screens */
+        }
+    }
+</style>
+
+</head>
+
+
+<body>
+
+<header>
+    <h1>Header</h1>
+</header>
+
+<div class="left-side">
+    <h2>Left Side</h2>
+</div>
+
+<div class="middle">
+    <h2>Middle Content Area</h2>
+</div>
+
+<div class="right-side">
+    <h2>Right Side</h2>
+</div>
+
+<div class="clearfix"></div>
+
+<footer>
+    <h3>Footer</h3>
+</footer>
+
+</body>
+</html>
