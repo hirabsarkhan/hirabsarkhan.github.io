@@ -1,0 +1,176 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color scheme */
+:root {
+    --primary-color: #4CAF50; /* Green */
+    --secondary-color: #1976D2; /* Blue */
+    --background-color: #f7f7f7; /* Light gray */
+    --text-color: #333; /* Dark gray */
+    --accent-color: #FFA726; /* Orange */
+}
+
+/* Container for the main content */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+form {
+    margin-bottom: 20px;
+}
+
+form h2 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+form button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Recipe list styling */
+#recipeList {
+    margin-top: 20px;
+}
+
+.recipe-item {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: white;
+    transition: box-shadow 0.3s ease;
+}
+
+.recipe-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-item h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.recipe-item p {
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.recipe-item img {
+    max-width: 100px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.recipe-item button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.recipe-item button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Search input styling */
+#searchForm {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    width: calc(100% - 80px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+#searchForm button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+#searchForm button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Pagination controls styling */
+#paginationControls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#paginationControls button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 10px;
+}
+
+#paginationControls button:hover {
+    background-color: var(--accent-color);
+}
+
+#paginationControls span {
+    font-weight: bold;
+    color: var(--text-color);
+}

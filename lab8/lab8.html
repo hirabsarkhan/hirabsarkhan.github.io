@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lab8.css">
+    <title>Recipe Management System</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Recipe Management System</h1>
+
+        <!-- Search form -->
+        <form id="searchForm" action="search_results.html" method="get">
+            <input type="text" id="searchInput" name="query" placeholder="Search by title or ingredients" required>
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Form for adding new recipes -->
+        <form id="recipeForm">
+            <h2>Add New Recipe</h2>
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="ingredients">Ingredients:</label>
+                <textarea id="ingredients" name="ingredients" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="instructions">Instructions:</label>
+                <textarea id="instructions" name="instructions" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="image">Image:</label>
+                <input type="file" id="image" name="image">
+            </div>
+            <button type="submit">Add Recipe</button>
+        </form>
+
+        <!-- Section to display existing recipes -->
+        <section id="recipeList">
+            <h2>Recipes</h2>
+            <div id="recipes"></div>
+        </section>
+
+        <!-- Pagination controls -->
+        <div id="paginationControls">
+            <button id="prevPage" disabled>Previous</button>
+            <span id="currentPage">1</span> / <span id="totalPages">1</span>
+            <button id="nextPage" disabled>Next</button>
+        </div>
+    </div>
+
+    <!-- Script for the Recipe Management System -->
+    <script src="lab8.js"></script>
+</body>
+
+</html>
