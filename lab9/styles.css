@@ -1,20 +1,30 @@
 .article {
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-  }
-  
-  .article h2 {
-    margin-top: 0;
-  }
-  
-  .article img {
-    max-width: 400px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  .article p {
-    margin-top: 0;
-  }
-  
+  margin-bottom: 15px;
+  border: 2px solid #00aaff; /* Changed border color to blue and made it thicker */
+  border-radius: 5px; /* Added rounded corners */
+  padding: 15px; /* Increased padding */
+  background-color: #dfb9b9; /* Added a light background color */
+}
+
+.article h2 {
+  margin-top: 0;
+  color: #333; /* Changed color for better contrast */
+  font-family: 'Arial', sans-serif; /* Changed font family */
+  font-size: 1.5rem; /* Increased font size */
+}
+
+.article img {
+  max-width: 350px; /* Decreased max width */
+  height: auto;
+  margin-bottom: 15px; /* Increased margin-bottom */
+  border-radius: 10px; /* Added rounded corners to images */
+  border: 1px solid #f1a7a7; /* Added a thin border to images */
+}
+
+.article p {
+  margin-top: 0;
+  font-family: 'Arial', sans-serif; /* Changed font family */
+  font-size: 1rem; /* Adjusted font size */
+  line-height: 1.5; /* Added line height for better readability */
+  color: #555; /* Changed color for better contrast */
+}
