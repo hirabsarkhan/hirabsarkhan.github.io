@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech News</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="http://localhost/labexam/index.php">Registration</a></li>
+                <li><a href="#">Records</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div id="articles">
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h2>My News Website</h2>
+            </div>
+            <div class="footer-right">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Travels</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2021 - 2022 My News Website All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        const apiUrl = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=f7d54802ae9d4e2eb6b90d6e456b63ee';
+
+        async function fetchArticles() {
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                displayArticles(data.articles);
+            } catch (error) {
+                console.error('Error fetching the articles:', error);
+            }
+        }
+
+        function displayArticles(articles) {
+            const articlesContainer = document.getElementById('articles');
+
+            articles.forEach(article => {
+                const articleElement = document.createElement('div');
+                articleElement.className = 'article';
+                const imageCon = document.getElementById('image1');
+
+                if (article.urlToImage) {
+                    const imageCon = document.createElement('div');
+                    imageCon.className = 'image1';
+                    articleElement.appendChild(imageCon);
+                    const articleImage = document.createElement('img');
+                    articleImage.src = article.urlToImage;
+                    imageCon.appendChild(articleImage);
+                }
+                const textCon = document.createElement('div');
+                textCon.className = 'text';
+                articleElement.appendChild(textCon);
+                
+                const articlePublishedAt = document.createElement('p');
+                articlePublishedAt.textContent = `Published at: ${new Date(article.publishedAt).toLocaleString()}`;
+                textCon.appendChild(articlePublishedAt);
+
+                const articleTitle = document.createElement('h2');
+                articleTitle.innerHTML = `<a href="${article.url}" target="_blank">${article.title}</a>`;
+                textCon.appendChild(articleTitle);
+
+                const articleAuthor = document.createElement('p');
+                articleAuthor.textContent = `By: ${article.author}`;
+                textCon.appendChild(articleAuthor);
+
+                const articleDescription = document.createElement('p');
+                articleDescription.textContent = article.description;
+                textCon.appendChild(articleDescription);
+                
+
+                
+                const btn = document.createElement('button');
+                btn.className= 'btn1';
+                btn.textContent = "Read More";
+                textCon.appendChild(btn);
+
+                articlesContainer.appendChild(articleElement);
+            });
+        }
+
+        // Fetch articles when the page loads
+        window.onload = fetchArticles;
+    </script>
+</body>
+</html>

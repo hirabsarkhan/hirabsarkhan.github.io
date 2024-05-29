@@ -1,9 +1,9 @@
 const person = {
-    firstName: 'John',
-    lastName: 'Doe',
-    age: 30,
-    email: 'john.doe@example.com',
-    address: '123 Main St',
+    firstName: 'Hira',
+    lastName: 'Absar khan',
+    age: 23,
+    email: 'hiraabsarkhan@gmail.com',
+    address: 'shahbaz town,Quetta',
 
     // Method to get the full name
     getFullName() {
