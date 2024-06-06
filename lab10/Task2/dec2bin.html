@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decimal to Binary Converter</title>
+    <script type="text/javascript">
+        function convertToBinary() {
+            var decimalNumber = document.getElementById("decimalNumber").value;
+            var binaryNumber = (decimalNumber >>> 0).toString(2);
+            document.getElementById("binaryResult").value = binaryNumber;
+        }
+    </script>
+</head>
+<body>
+    <h1>Decimal to Binary Converter</h1>
+    <form action="" method="post">
+        <label for="decimalNumber">Enter a deci number:</label>
+        <input type="number" id="decimalNumber" name="decimalNumber" required>
+        <input type="button" value="Convert" onclick="convertToBinary()">
+    </form>
+    <br>
+    <label for="binaryResult">Binary Equivalent:</label>
+    <input type="text" id="binaryResult" name="binaryResult" readonly>
+</body>
+</html>

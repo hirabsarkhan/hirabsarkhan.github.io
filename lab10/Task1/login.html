@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <script type="text/javascript">
+        function validate() {
+            var usrnm = document.getElementById("login").value;
+            var pswrd = document.getElementById("password").value;
+            if (usrnm == "Galgotias" && pswrd == "university") {
+                window.location = "welcome.html";
+                return false;
+            } else {
+                window.location = "sorry.html";
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validate()">
+        <label for="login">Username:</label>
+        <input type="text" id="login" name="login">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
